@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume</title>
+
+    <style>
+        /* Базові стилі */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .main {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .main-content {
+            width: 70%;
+            order: 1;
+            /* Встановлюємо головний контент після сайдбару */
+        }
+    
+        .sidebar {
+            width: 30%;
+            order: 0;
+            /* Сайдбар буде першим зліва */
+        }
+    
+        img.photo {
+            width: 300px;
+        }
+    
+        /* Адаптивність для мобільних екранів (максимум 768px) */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .main-content,
+            .sidebar {
+                width: 100%;
+            }
+    
+            .sidebar {
+                margin-top: 20px;
+                order: 0;
+            }
+    
+            img.photo {
+                width: 100%;
+            }
+    
+            h1,
+            h2,
+            h3 {
+                font-size: 18px;
+            }
+    
+            p,
+            li {
+                font-size: 14px;
+            }
+        }
+    
+        /* Адаптивність для планшетів (максимум 1024px) */
+        @media (max-width: 1024px) {
+            .main {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+            .main-content {
+                width: 60%;
+                order: 1;
+            }
+    
+            .sidebar {
+                width: 40%;
+                order: 0;
+            }
+    
+            h1,
+            h2,
+            h3 {
+                font-size: 20px;
+            }
+    
+            p,
+            li {
+                font-size: 16px;
+            }
+        }
+    
+        /* Адаптивність для великих екранів */
+        @media (min-width: 1025px) {
+            .main {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+            .main-content {
+                width: 70%;
+                order: 1;
+            }
+    
+            .sidebar {
+                width: 30%;
+                order: 0;
+            }
+    
+            img.photo {
+                width: 300px;
+            }
+    
+            h1,
+            h2,
+            h3 {
+                font-size: 24px;
+            }
+    
+            p,
+            li {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--Main-->
+    <div class="main">
+
+        <!--Main Content-->
+        <div class="main-content">
+
+            <!--about user-->
+            <div class="about">
+
+                <h2 class="about-position">Data scientist | Data analyst</h2>
+                <h1 class="about-name">Kateryna Zabazna</h1>
+                <p class="about-description">Self-motivated data scientist, currently hard-working student of
+                    Informatics and Business Analytics. Ready to utilize my
+                    skills and passion to further the mission of a company. Open to learn and develop in the IT-sphere
+                    and analysis.
+                    Bringing a positive attitude and the willingness to master new programs, programming languages and
+                    softwares.</p>
+            </div>
+
+            <!--Work-->
+            <div>
+                <h3 class="title">Work Experience</h3>
+
+                <!--company 1-->
+                <div class="experience">
+                    <h4 class="job">Change Management Working Student
+                        <span class="mode">SAP SE</span>
+                    </h4>
+                    <p class="period">February 2023 - up to now | Walldorf, Germany</p>
+                    <ul class="work-list">
+                        <li class="work-item">Preparation and conduction of Change Readiness Assessment</li>
+                        <li class="work-item">Gap analysis</li>
+                        <li class="work-item">Video & news-letter creation</li>
+                        <li class="work-item">Communication with stakeholders</li>
+                        <li class="work-item">Data analysis and visualization</li>
+                        <li class="work-item">Creation of presentations, documents and working instructions</li>
+                    </ul>
+                </div>
+
+                <div class="experience">
+                    <h4 class="job">English & German language tutor
+                        <span class="mode">Freelance</span>
+                    </h4>
+                    <p class="period">September 2021 - up to now | On-line</p>
+                    <ul class="work-list">
+                        <li class="work-item">Giving language lessons</li>
+                        <li class="work-item">Preparation of pupils for Ukrainian ZNO and NMT</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--Education-->
+            <div>
+                <h3 class="title">Education</h3>
+                <h4 class="university">State University of Trade and Economics</h4>
+                <p class="speciality">Bachelor in System Analysis: IT and Business Analytics</p>
+                <p class="study-period">September 2021 - up to now</p>
+                <h4 class="university">Technical University Würzburg-Schweinfurt</h4>
+                <p class="speciality">Exchange semester Erasmus+ | Computer science</p>
+                <p class="study-period">March 2024 - September 2024</p>
+            </div>
+
+
+            <!--Acquired tech skills-->
+            <div class="tech-skills">
+                <h3 class="title">
+                    Acquired tech skills
+                </h3>
+                <p class="acquired-tech-skills">Python - Jupyter Notebook, PyCharm:
+                <ul>
+                    <li>data analysis and visualization (Numpy, Pandas, PySpark, Matplotlib, Seaborn, Plotly, Folium)
+                    </li>
+                    <li>parsing/web-scraping (BeautifulSoup4, Selenium, Requests)</li>
+                    <li>machine learning (Sklearn, Surprise)</li>
+                    <li>interface development (Tkinter, PIL)</li>
+                    <li>database (sqlite3, Psycopg2)</li>
+                </ul>
+                R (R Studio), Power BI, Tableau, MS Office, MS Visio, DB Browser for SQLite, PostgreSQL,
+                Erwin Data Modeler
+                </p>
+            </div>
+        </div>
+
+
+        <!--Sidebar-->
+        <aside class="sidebar">
+            <img src="img/img.jpg" alt="invalid image" width="300" class="photo">
+
+
+            <!--Location-->
+            <div class="location">
+                <h3 class="sidebar-title">Location</h3>
+                <div class="location-type">
+                    <p>
+                        <span>Heidelberg,<br>Baden-Württemberg,<br>Germany</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <!--Contacts-->
+            <div class="contacts">
+                <h3 class="sidebar-title">Contacts</h3>
+                <div>
+                    <p>
+                        <span class="contact-type">C:</span>
+                        <a href="tel:+4915118472012" class="contact-link">+49 1511 8472012<br></a>
+                        <span class="contact-type">E:</span>
+                        <a href="mailto:zbznay@gmail.com" class="contact-link">zbznay@gmail.com</a>
+                        <span class="contact-type"><br>LinkedIn: </span>
+                        <a href="https://www.linkedin.com/in/kateryna-zabazna-84751525b/" class="contact-link">Kateryna
+                            Zabazna</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <!--Languages-->
+            <div class="languages">
+                <h3 class="sidebar-title">Languages</h3>
+                <ul class="languages-list">
+                    <li class="languages-list-item"><span class="languages-list-text">English - C1</span></li>
+                    <li class="languages-list-item"><span class="languages-list-text">German - C1</span></li>
+                    <li class="languages-list-item"><span class="languages-list-text">Ukrainian - native</span></li>
+                    <li class="languages-list-item"><span class="languages-list-text">Russian - native</span></li>
+                </ul>
+            </div>
+
+
+            <!--Soft Skills-->
+            <div class="soft-skills">
+                <h3 class="sidebar-title">Soft Skills</h3>
+                <ul class="soft-skills-list">
+                    <li class="soft-skills-type"><span class="soft-skills-text">Communication</span></li>
+                    <li class="soft-skills-type"><span class="soft-skills-text">Teamwork</span></li>
+                    <li class="soft-skills-type"><span class="soft-skills-text">Time Management</span></li>
+                    <li class="soft-skills-type"><span class="soft-skills-text">Agile</span></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>
